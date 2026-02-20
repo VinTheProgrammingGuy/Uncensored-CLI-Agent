@@ -1,0 +1,16 @@
+[project]
+name = "sentry-agent"
+version = "0.2.0"
+description = "CLI coding agent powered by Venice Uncensored API"
+requires-python = ">=3.10"
+dependencies = ["typer>=0.9.0", "rich>=13.0.0", "requests>=2.31.0"]
+
+[project.scripts]
+sentry = "sentry_agent.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sentry_agent"]
